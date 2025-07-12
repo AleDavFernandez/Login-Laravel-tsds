@@ -92,6 +92,8 @@ class TareaController extends Controller
      */
     public function destroy(Tarea $tarea)
     {
-        //
+         $tarea->delete();
+        return redirect()->route('tareas.index')
+        ->with('success', 'Tarea eliminada exitosamente.');
     }
 }

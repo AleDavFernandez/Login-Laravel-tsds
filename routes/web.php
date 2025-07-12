@@ -29,3 +29,7 @@ Route::get('/tareas/create', [App\Http\Controllers\TareaController::class, 'crea
 
 Route::post('/tareas', [App\Http\Controllers\TareaController::class, 'store'])
     ->name('tareas.store');
+
+Route::delete('/tareas/{tarea}', [App\Http\Controllers\TareaController::class, 'destroy'])
+    ->name('tareas.destroy');
+
